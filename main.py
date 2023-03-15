@@ -1,3 +1,5 @@
+#                                                               LAB1:
+
 # a = 'a'
 # print(a)
 #
@@ -89,14 +91,111 @@
 #         licznik +=1
 
 
-liczby = [1,2,2,2,2,3]
-licznik = 0;
+# liczby = [1,2,2,2,2,3]
+# licznik = 0;
+#
+# while licznik != len(liczby):
+#      if liczby[licznik] == 2:
+#          liczby.remove(liczby[licznik])
+#
+#      else:
+#          licznik +=1
+#
+# print(liczby)
 
-while licznik != len(liczby):
-     if liczby[licznik] == 2:
-         liczby.remove(liczby[licznik])
+#                                                           LAB2:
+import math
+# Zad.1
+# x=math.exp(10)
+# print(x)
 
-     else:
-         licznik +=1
+# y = math.pow(math.log(5+math.pow(math.sin(8),2)),1/6)
+# print(y)
 
-print(liczby)
+# z = math.floor(3.55)
+# print(z)
+# q = math.ceil(4.80)
+# print(q)
+
+
+# Zad.2
+# imie="SZYMON"
+# nazwisko = "OBNISKI"
+# print(imie.capitalize(),nazwisko.capitalize())
+
+# Zad.3
+# fragment = "Tequila Tequila Tequila"
+# # Tekst pochodzi z https://www.tekstowo.pl/piosenka,the_champs,tequila.html"
+# print(fragment.count('Tequila'))
+
+# Zad.4
+# imie="szymon"
+# print(imie[0],imie[len(imie)-1])
+
+#Zad.5
+
+# print(fragment.split())
+
+# Zad.6
+
+#
+# a = "mniej niż zero"
+# b = 2.342
+# c = 0xFF1E
+#
+#
+# print(a)
+# print(b)
+# print("{:X}".format(c))
+
+
+# Zad.7
+# sport = ["nożna","ręczna","siatkówka","siłka"]
+# odwr = list(reversed(sport))
+# odwr.append("boks")
+# print(odwr)
+
+# Zad.8
+# skrot= {'jj':'juz jetsem','z/w':'zaraz wracam'}
+# print(skrot)
+
+# Zad.9
+# skrot= {'minecraft':'klocek','call_of_duty':'RPG'}
+# dlugosc = len(skrot)
+# print(skrot,dlugosc)
+# Zad.10
+# x = input()
+# y = 0
+# for i in x:
+#     if i =="a" or i=="A":
+#         y+=1
+# print(x , y)
+
+# Zad.11
+# a = input()
+# b = input()
+# c = input()
+# if a > b and a>c:
+#     print("A jest najwieksze")
+# elif b > a and b>c:
+#     print("b jest najwieksze")
+# else :
+#     print("C jest najwieksze")
+
+#Zad.12
+
+# a = [2, 2.5, 3, 3.5, 5, 6.2]
+# for i in range(len(a)):
+#     a[i] = a[i] ** 2
+# print(a)
+
+# Zad.13
+# b = []
+# i = 0
+# while i < 10:
+#     a = int(input())
+#     if a % 2 == 0:
+#         b.append(a)
+#     i += 1
+#
+# print("Parzyste liczby: ", b)
