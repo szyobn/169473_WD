@@ -199,3 +199,84 @@ import math
 #     i += 1
 #
 # print("Parzyste liczby: ", b)
+# Zad.15
+# a = {1-x for x in range(1,11)}
+# b = {i**2 for i in range(1, 7)}
+# c = {x for x in b if x % 2 == 0}
+# print("A: ", a)
+# print("B:", b)
+# print("C:", c)
+# Zad.16
+# import random
+# l1 = [random.randint(1, 100) for i in range(10)]
+# print("Pierwsza: ", l1)
+# Zad.17
+#
+#                                 LAB4
+#Zad.1
+# plik=open("zad.1.txt","a")
+#
+# lista=[]
+#
+# for i in range (0,31):
+#     lista+=[i]
+#
+# for i in lista:
+#     lista[i]*=2
+# print(lista)
+# plik.writelines(str(lista))
+#
+# plik.close()
+#Zad.2
+# plik=open("Zad.1.txt","r")
+#
+# linia=plik.readlines()
+# print(linia)
+# plik.close()
+# Zad.3
+# with open("Zad.3.txt","w+") as plik:
+#     for i in range(4):
+#         plik.write("Mamy w sobie moc,\n")
+#
+#
+# zad3=open("Zad.3.txt","r")
+# linia=zad3.readlines()
+# print(linia)
+# zad3.close()
+#Zad.4
+class NaZakupy:
+    nazwaproduktu=''
+    ilosc=''
+    jednostkamiary=''
+    cenajed='zl'
+    def __init__(self,nazwaproduktu,ilosc,jednostkamiary,cenajed):
+        self.nazwa = nazwaproduktu
+        self.ilosc = ilosc
+        self.jednostka = jednostkamiary
+        self.cena = cenajed
+
+    def wyswietlprodukt(self):
+        return nazwa+' '+ilosc+' '+jednostka+' '+cena+' zl'
+
+    def ileproduktow(self):
+        return ilosc+' '+jednostka
+    def ilekosztuje(self):
+        wynik=int(ilosc) * int(cena)
+        return str(wynik)
+
+
+nazwa=input("Nazwa: ")
+ilosc=input("Ilosc: ")
+jednostka=input("Jednostka miary: ")
+cena=input("Cena: ")
+
+nowy=NaZakupy(nazwaproduktu=str(nazwa),
+              ilosc=int(ilosc),jednostkamiary=str(jednostka),
+              cenajed=int(cena))
+
+print(nowy.wyswietlprodukt())
+
+print("Ilosc : "+nowy.ileproduktow())
+
+print("Koszt: "+nowy.ilekosztuje()+" zl")
+
