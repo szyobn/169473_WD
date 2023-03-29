@@ -244,39 +244,132 @@ import math
 # print(linia)
 # zad3.close()
 #Zad.4
-class NaZakupy:
-    nazwaproduktu=''
-    ilosc=''
-    jednostkamiary=''
-    cenajed='zl'
-    def __init__(self,nazwaproduktu,ilosc,jednostkamiary,cenajed):
-        self.nazwa = nazwaproduktu
-        self.ilosc = ilosc
-        self.jednostka = jednostkamiary
-        self.cena = cenajed
+# class NaZakupy:
+#     nazwaproduktu=''
+#     ilosc=''
+#     jednostkamiary=''
+#     cenajed='zl'
+#     def __init__(self,nazwaproduktu,ilosc,jednostkamiary,cenajed):
+#         self.nazwa = nazwaproduktu
+#         self.ilosc = ilosc
+#         self.jednostka = jednostkamiary
+#         self.cena = cenajed
+#
+#     def wyswietlprodukt(self):
+#         return nazwa+' '+ilosc+' '+jednostka+' '+cena+' zl'
+#
+#     def ileproduktow(self):
+#         return ilosc+' '+jednostka
+#     def ilekosztuje(self):
+#         wynik=int(ilosc) * int(cena)
+#         return str(wynik)
+#
+#
+# nazwa=input("Nazwa: ")
+# ilosc=input("Ilosc: ")
+# jednostka=input("Jednostka miary: ")
+# cena=input("Cena: ")
+#
+# nowy=NaZakupy(nazwaproduktu=str(nazwa),
+#               ilosc=int(ilosc),jednostkamiary=str(jednostka),
+#               cenajed=int(cena))
+#
+# print(nowy.wyswietlprodukt())
+#
+# print("Ilosc : "+nowy.ileproduktow())
+#
+# print("Koszt: "+nowy.ilekosztuje()+" zl")
+#Zad.5
 
-    def wyswietlprodukt(self):
-        return nazwa+' '+ilosc+' '+jednostka+' '+cena+' zl'
+# class CiagiArytmetyczne:
+#      lista1=[]
+#      lista2=[]
+#
+#     def wyswietl_dane(self):
+#        return
+#
+#     def pobierz_elementy(self,lista1):
+#         elementy=input("Podaj liczby ciagu arytmetycznego: ")
+#         lista1+=[elementy]
+#
+#     def pobierz_parametry(self):
+#         pierwsza=input("Podaj pierwszą watrość: ")
+#         roznica=input("Podaj różnicę: ")
+#         ilosc=input("Podaj ilość elementów ciągu: ")
 
-    def ileproduktow(self):
-        return ilosc+' '+jednostka
-    def ilekosztuje(self):
-        wynik=int(ilosc) * int(cena)
-        return str(wynik)
+        #  przykładowy zestaw A
+# Zad.1
+# plik=open("zadanie1.txt","a")
+#
+# a = int(input("Podaj liczbę a: "))
+# b = int(input("Podaj liczbę b: "))
+#
+# wynik = a**2 + a*b + b**2
+#
+#
+# print(wynik)
+# plik.writelines(str(wynik))
+#
+# plik.close()
+
+# Zad.2
+# def sumuj(lista1, lista2):
+#
+#     suma = []
+#
+#
+#     if len(lista1) < len(lista2):
+#         n = len(lista1)
+#     else:
+#         n = len(lista2)
+#
+#
+#     for i in range(n):
+#         s = lista1[i] + lista2[i]
+#         suma.append(s)
+#
+#     return suma
+#
+#
+# lista1 = [2, 3, 4,5]
+# lista2 = [4, 5, 6, 7]
+#
+# wynik = sumuj(lista1, lista2)
+# print(wynik)
+#Zad.3
+# with open('tekst.txt', 'r', encoding='utf-8') as plik:
+#
+#     tekst = plik.read()
+#
+#     fragment = tekst[100:135]
+#
+#
+#     print("Fragment tekstu: ", fragment)
+#
+#     duze_litery = [znak for znak in fragment if znak.isupper()]
+#     if duze_litery:
+#         print("Duże litery w fragmencie: ", duze_litery)
+#         print("Liczba dużych liter w fragmencie: ", len(duze_litery))
+#     else:
+#         print("W fragmencie nie ma dużych liter.")
+
+# Zad.4
+# liczby = [1, 5, 10, 15, 20, 25]
+# a = 10
+#
+# wieksze_niz_a = [x for x in liczby if x > a]
+#
+# print("Liczby: ", liczby)
+# print("a: ", a)
+# print("Elementy z liczby większe niż a: ", wieksze_niz_a)
+#Zad.5
+import math
+
+wynik = pow(pow(math.e,3) + pow(math.cos(39),2),1/5) + pow((2/7),3) + math.pi
+print(wynik)
 
 
-nazwa=input("Nazwa: ")
-ilosc=input("Ilosc: ")
-jednostka=input("Jednostka miary: ")
-cena=input("Cena: ")
 
-nowy=NaZakupy(nazwaproduktu=str(nazwa),
-              ilosc=int(ilosc),jednostkamiary=str(jednostka),
-              cenajed=int(cena))
 
-print(nowy.wyswietlprodukt())
 
-print("Ilosc : "+nowy.ileproduktow())
-
-print("Koszt: "+nowy.ilekosztuje()+" zl")
 
