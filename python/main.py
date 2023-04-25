@@ -134,21 +134,16 @@ def macierz(n):
 print(macierz(5))
 #ZAD6
 
-# słowa do umieszczenia w macierzy
 words = ['PYTHON', 'NUMPY', 'ARRAY', 'MATRIX']
 
-# wymiary macierzy
 n_rows = len(words)
 n_cols = max(len(word) for word in words)
 
-# inicjalizacja macierzy zerami
 matrix = np.zeros((n_rows, n_cols), dtype='U1')
 
-# umieszczenie słów w macierzy
 for i, word in enumerate(words):
     matrix[i, :len(word)] = list(word)
 
-# wypisanie macierzy w postaci wykreślanki
 for i in range(n_rows):
     for j in range(n_cols):
         if matrix[i, j] != '':
@@ -157,12 +152,10 @@ for i in range(n_rows):
             print(' ', end=' ')
     print()
 
-# dodanie słowa po ukosie (od prawej do lewej)
 diagonal_word = 'NUM'
 for i in range(len(diagonal_word)):
     matrix[i, n_cols-len(diagonal_word)+i] = diagonal_word[i]
 
-# ponowne wypisanie macierzy w postaci wykreślanki z dodanym słowem po ukosie
 print()
 for i in range(n_rows):
     for j in range(n_cols):
@@ -174,10 +167,10 @@ for i in range(n_rows):
 #ZAD7
 
 def genmacierz(n):
-    # Tworzenie macierzy n*n wypełnionej zerami
+    
     matrix = np.zeros((n, n), dtype=int)
 
-    # Uzupełnianie macierzy o kolejne wielokrotności liczby 2 na przekątnych
+    
     for i in range(n):
         matrix[i, i] = 2 * (i + 1)
         if i < n - 1:
@@ -208,26 +201,24 @@ def array(arr, direction):
     arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
     print(arr)
 
-    # Podział pionowy
+  
     arr1, arr2 = divide_array(arr, 'vertical')
     print(arr1)
     print(arr2)
 
-    # Podział poziomy
+ 
     arr3, arr4 = divide_array(arr, 'horizontal')
     print(arr3)
     print(arr4)
 
-    # Nieprawidłowy kierunek podziału
+    
     arr5 = divide_array(arr, 'wrong')
     print(arr5)
 
     #ZAD9
 
-    # wygenerowanie tablicy jednowymiarowej
     arr = np.arange(1, 26)
 
-    # zmiana kształtu na macierz 5x5
     arr = arr.reshape((5, 5))
 
     print(arr)
