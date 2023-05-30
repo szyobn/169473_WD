@@ -1,1 +1,15 @@
 
+zestaw a
+zad1
+# Tworzenie listy liczb
+lista_liczb = [5, 10, 3, 8, 15, 2, 7]
+
+# Znalezienie największego elementu w liście
+najwiekszy_element = max(lista_liczb)
+
+# Utworzenie nowej listy zawierającej elementy mniejsze od największego
+nowa_lista = [liczba for liczba in lista_liczb if liczba < najwiekszy_element]
+
+# Wyświetlenie obydwu list
+print("Lista liczb:", lista_liczb)
+print("Nowa lista (elementy mniejsze od największego):", nowa_lista)
