@@ -1,1 +1,15 @@
 
+zestawa
+zad1
+# Utwórz listę z liczbami
+lista = [7, 12, 5, 9, 20, 3, 8]
+
+# Znajdź największą liczbę w liście
+najwieksza = max(lista)
+
+# Utwórz nową listę, zawierającą tylko elementy mniejsze od największej liczby
+nowa_lista = [x for x in lista if x < najwieksza]
+
+# Wyświetl obie listy
+print("Lista pierwotna:", lista)
+print("Nowa lista:", nowa_lista)
