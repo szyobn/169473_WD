@@ -1,1 +1,11 @@
+zestawa
+zad1
+numbers = [5, 10, 15, 20, 25, 30]
+
+max_number = max(numbers)  # znajdujemy największy element
+
+new_list = [x for x in numbers if x < max_number]  # tworzymy nową listę z elementami mniejszymi od największego
+
+print("Pierwsza lista:", numbers)
+print("Nowa lista:", new_list)
 
