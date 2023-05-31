@@ -49,4 +49,37 @@ glass_percentages = glass_counts / total_count * 100
 # Wyświetlanie wykresu kołowego
 glass_percentages.plot(kind='pie', autopct='%1.1f%%')
 
+zad 4 
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Wczytanie danych z pliku
+data = pd.read_csv('glass.data', header=None)
+
+# Ustawienie etykiet dla kolumn
+data.columns = ['Id', 'RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe', 'Type']
+
+# Policzenie ilości każdego rodzaju szkła
+glass_counts = data['Type'].value_counts()
+
+# Ustawienie stylu wykresu na podstawowy
+sns.set(style='whitegrid')
+
+# Stworzenie wykresu słupkowego
+plt.figure(figsize=(10, 6))
+sns.barplot(x=glass_counts.index, y=glass_counts.values)
+
+# Dodanie etykiet osi i tytułu wykresu
+plt.xlabel('Rodzaj szkła')
+plt.ylabel('Ilość')
+plt.title('Ilość każdego rodzaju szkła')
+
+# Wyświetlenie legendy
+plt.legend()
+
+# Wyświetlenie wykresu
+pln.show()
+
+
 
