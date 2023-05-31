@@ -1,0 +1,95 @@
+import numpy as np
+#ZAD1
+print("ZAD1:")
+macierz1 = np.array([1, 2, 3])
+macierz2 = np.array([4, 5, 6])
+print(macierz1)
+print(macierz2)
+wynik = np.dot(macierz1, macierz2)
+print(wynik)
+
+#ZAD2
+print("ZAD2:")
+macierz1 = np.array([[4, 2, 5], [1, 6, 3], [8, 7, 9]])
+print(macierz1)
+print(np.min(macierz1, axis=0))
+print(np.min(macierz1, axis=1))
+
+macierz2 = np.array([[9, 8, 7, 6], [5, 4, 3, 2], [1, 0, -1, -2], [-3, -4, -5, -6]])
+print(macierz2)
+
+print(np.min(macierz2, axis=0))
+print(np.min(macierz2, axis=1))
+
+#ZAD3
+print("ZAD3:")
+macierz1 = np.array([1, 2, 3])
+macierz2 = np.array([4, 5, 6]).reshape((3,1))
+print(macierz1)
+print(macierz2)
+wynik = np.dot(macierz1, macierz2)
+print(wynik)
+
+#ZAD4
+print("ZAD4:")
+macierz1 = np.array([1, 2, 3], dtype=int)
+macierz2 = np.array([4.5, 5.5, 6.5])
+print(macierz1)
+print(macierz2)
+wynik = np.dot(macierz1, macierz2)
+print(wynik)
+
+#ZAD5
+print("ZAD5:")
+macierz = np.array([[1, 2, 3], [4, 5, 6]])
+a = np.sin(macierz)
+print(a)
+
+#ZAD6
+print("ZAD6:")
+macierz = np.array([[2, 4, 6], [8, 10, 12]])
+b = np.cos(macierz)
+print(b)
+
+#ZAD7
+print("ZAD7:")
+a = np.array([[0.84147098, 0.90929743, 0.14112001], [-0.7568025, -0.95892427, -0.2794155]])
+b = np.array([[-0.41614684, -0.65364362, 0.96017029], [-0.14550003, -0.83907153, 0.84385396]])
+c = a + b
+print(c)
+
+#ZAD8
+print("ZAD8:")
+macierz = np.random.rand(3, 3)
+for row in macierz:
+    print(row)
+
+#ZAD9
+print("ZAD9:")
+macierz = np.random.rand(3, 3)
+for element in macierz.flat:
+    print(element)
+
+#ZAD10
+print("ZAD10:")
+macierz = np.random.rand(9, 9)
+macierz_3x27 = macierz.reshape(3, 27)
+print(macierz_3x27)
+macierz_27x3 = macierz.reshape(27, 3)
+print(macierz_27x3)
+macierz_1x81 = macierz.reshape(1, 81)
+print(macierz_1x81)
+
+#ZAD11
+print("ZAD11:")
+vector = np.arange(12)
+print(vector)
+macierz_3x4 = vector.reshape(3, 4)
+print(macierz_3x4)
+macierz_4x3 = vector.reshape(4, 3)
+print(macierz_4x3)
+macierz_2x6 = vector.reshape(2, 6)
+print(macierz_2x6)
+print(macierz_3x4.flatten())
+print(macierz_4x3.flatten())
+print(macierz_2x6.flatten())
