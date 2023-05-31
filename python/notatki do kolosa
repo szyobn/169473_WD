@@ -29,3 +29,25 @@ plt.xlim(-3, 5)
 plt.legend()
 plt.title('Wykres funkcji f(x)')
 plt.show()
+
+#Zadanie 2
+
+#Zadanie 3
+import pandas as pd
+
+# Wczytanie pliku do ramki danych
+data = pd.read_csv('glass.data', header=None)
+
+# Utworzenie nowej ramki danych z wierszami, gdzie typ szkła równa się 6 lub 7
+filtered_data = data[data[10].isin([6, 7])]
+
+# Grupowanie danych po kolumnie "Type of glass" w nowej ramce danych
+grouped_data = filtered_data.groupby(10).size()
+
+# Tworzenie wykresu kołowego
+grouped_data.plot(kind='pie', autopct='%.2f%%')
+
+# Wyświetlenie wykresu
+plt.show()
+
+# SZYMI ZOBACZ CZY TO DZIALA I ODPISZ TUTAJ
