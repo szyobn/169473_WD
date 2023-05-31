@@ -35,6 +35,57 @@ aluminum_percentages = grouped['Aluminum'].mean() / df['Aluminum'].mean() * 100
 # Wykres kołowy
 aluminum_percentages.plot.pie(autopct='%1.1f%%')
 
+#Zadanie 4
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Wczytanie danych
+data = pd.read_csv("glass.data", header=None)
+data.columns = [
+    "Id number",
+    "Refractive index",
+    "Sodium",
+    "Magnesium",
+    "Aluminum",
+    "Silicon",
+    "Potassium",
+    "Calcium",
+    "Barium",
+    "Iron",
+    "Type of glass",
+]
+
+# Obliczenie ilości wystąpień każdego rodzaju szkła
+glass_counts = data["Type of glass"].value_counts()
+
+# Ustawienie stylu wykresu na podstawowy
+sns.set_style("whitegrid")
+
+# Wygenerowanie wykresu słupkowego
+plt.figure(figsize=(10, 6))
+sns.barplot(x=glass_counts.index, y=glass_counts.values)
+
+# Dodanie etykiet osi, legendy i tytułu wykresu
+plt.xlabel("Rodzaj szkła")
+plt.ylabel("Ilość")
+plt.title("Ilość każdego rodzaju szkła")
+plt.xticks(rotation=45)
+
+# Zapisanie wykresu do pliku PNG
+plt.savefig("imię_nazwisko_nr_zadania.png", dpi=300)
+
+# Wyświetlenie wykresu
+plt.show()
+
+
+
+
+
+======================================================================================================================================
+
+
+
 
 Grupa 3 zestaw B
 #Zadanie 1
