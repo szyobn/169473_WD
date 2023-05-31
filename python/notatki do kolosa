@@ -122,3 +122,31 @@ grouped_data.plot(kind='pie', autopct='%.2f%%')
 # Wyświetlenie wykresu
 plt.show()
 
+#Zadanie 4
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Wczytanie pliku
+data = pd.read_csv('glass.data', header=None)
+data.columns = ['Id number', 'Refractive index', 'Sodium', 'Magnesium', 'Aluminum', 'Silicon', 'Potassium', 'Calcium', 'Barium', 'Iron', 'Type of glass']
+
+# Obliczenie liczby wystąpień każdego rodzaju szkła
+glass_counts = data['Type of glass'].value_counts()
+
+# Ustawienie stylu wykresu
+sns.set(style='whitegrid')
+
+# Wygenerowanie wykresu słupkowego
+plt.figure(figsize=(10, 6))
+sns.barplot(x=glass_counts.index, y=glass_counts.values)
+
+# Dodanie etykiet osi, legendy i tytułu wykresu
+plt.xlabel('Type of glass')
+plt.ylabel('Count')
+plt.title('Number of Glass Types')
+
+# Zapis wykresu do pliku PNG
+plt.savefig('imię_nazwisko_nr_zadania.png', dpi=300)
+
+
