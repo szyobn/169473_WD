@@ -55,4 +55,30 @@ plt.title('Procentowy udział klas')
 plt.show()
 
 
-3.
+3.za pomocą biblioteki pandas wczytaj zawartość pliku "wine.data", 
+następnie na wykresie kolumnowym z biblioteki seaborn przedstaw średnie wartości alkoholu dla każdej  z klasy (kolumny alcohol i class).
+Na wykresie mają być podpisane etykiety dotyczące osi, legenda, tytuł wykresu. Ustaw styl wykresu na podstawowy.
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Wczytanie pliku 'wine.data' do ramki danych
+df = pd.read_csv('wine.data', header=None)
+
+# Nadanie nazw kolumn
+df.columns = ['class', 'alcohol', 'malic_acid', 'ash', 'alcalinity', 'magnesium', 'total_phenols', 'flavanoids', 'nonflavanoid_phenols', 'proanthocyanins', 'color_intensity', 'hue', 'OD280_OD315', 'proline']
+
+# Stworzenie wykresu kolumnowego
+sns.barplot(data = df , x='class', y='alcohol',  errorbar=None , hue='Class' , palette = ['red','green','yellow'])
+
+# Dodanie etykiet osi i tytułu wykresu
+plt.xlabel('Class')
+plt.ylabel('Średnia wartość alkoholu')
+plt.title('Średnia wartość alkoholu dla każdej klasy')
+
+# Wyświetlenie wykresu
+plt.show()
+
+z.4
+
