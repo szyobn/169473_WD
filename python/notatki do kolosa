@@ -15,6 +15,27 @@ plt.scatter(x, y, color='red', label='Wartości punktów')
 plt.legend()
 plt.show()
 
+#Zdanie 2
+
+#Zadanie 3
+import pandas as pd
+
+# Wczytanie danych do ramki danych
+df = pd.read_csv('glass.data', header=None, names=['Id number', 'Refractive index', 'Sodium', 'Magnesium', 'Aluminum', 'Silicon', 'Potassium', 'Calcium', 'Barium', 'Iron', 'Type of glass'])
+
+# Wybór 100 wierszy losowo bez powtarzania
+random_sample = df.sample(n=100, replace=False)
+
+# Grupowanie po kolumnie 'Type of glass'
+grouped = random_sample.groupby('Type of glass')
+
+# Obliczanie procentowego zużycia aluminium
+aluminum_percentages = grouped['Aluminum'].mean() / df['Aluminum'].mean() * 100
+
+# Wykres kołowy
+aluminum_percentages.plot.pie(autopct='%1.1f%%')
+
+
 Grupa 3 zestaw B
 #Zadanie 1
 import numpy as np
