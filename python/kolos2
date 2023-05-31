@@ -111,3 +111,29 @@ plt.xlim(-3, 5)
 # Wyświetlanie wykresu
 plt.show()
 
+zad 2 {*}
+
+zad 3 Tak samo jak tam, wkleje to co jest XD
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Wczytanie pliku 'glass.data' do ramki danych
+df = pd.read_csv('glass.data', header=None)
+
+# Utworzenie nowej ramki danych z losowo wybranymi 100 wierszami
+random_sample = df.sample(n=100, replace=False)
+
+# Grupowanie nowej ramki danych po kolumnie 'Type of glass'
+grouped = random_sample.groupby(10)
+
+# Obliczenie procentowego zużycia aluminium
+aluminum_percentages = grouped['Aluminum'].mean() * 100
+
+# Wygenerowanie wykresu kołowego
+plt.pie(aluminum_percentages, labels=aluminum_percentages.index, autopct='%1.1f%%')
+plt.title('Procentowe zużycie aluminium')
+plt.axis('equal')  # Równy aspekt wykresu
+plt.show()
+
+zad 4 
+
