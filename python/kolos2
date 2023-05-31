@@ -82,4 +82,32 @@ plt.legend()
 pln.show()
 
 
+grupa A 
+zad 1 
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Tworzenie wektora x
+x = np.linspace(-3, 5, 25)
+
+# Obliczanie wartości funkcji f(x)
+y = (8*x**2)/4 + np.cos(x)
+
+# Tworzenie wykresu
+plt.plot(x, y, label='f(x)=(8*x^2)/4 + cos(x)')
+plt.scatter(x, y, color='red', label='Wartości wektorów')
+
+# Dodawanie etykiet do osi i tytułu wykresu
+plt.xlabel('Wartość x')
+plt.ylabel('Wartość f(x)')
+plt.title('Wykres funkcji f(x) = (8*x^2)/4 + cos(x)')
+
+# Dodawanie legendy
+plt.legend()
+
+# Ustawianie zakresu osi x
+plt.xlim(-3, 5)
+
+# Wyświetlanie wykresu
+plt.show()
 
