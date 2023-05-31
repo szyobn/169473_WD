@@ -16,6 +16,7 @@ plt.legend()
 plt.show()
 
 #Zdanie 2
+#Nie da sie skopiowac wykresow
 
 #Zadanie 3
 import pandas as pd
@@ -103,6 +104,7 @@ plt.title('Wykres funkcji f(x)')
 plt.show()
 
 #Zadanie 2
+#Nie da sie skopiowac wykresow
 
 #Zadanie 3
 import pandas as pd
