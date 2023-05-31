@@ -17,7 +17,7 @@ plt.xlabel('x')
 plt.ylabel('f(x)')
 
 # Ustawianie zakresu osi x
-plt.xlim(3, 7)
+plt.axis([3, 7])
 
 # Dodawanie tytułu linii
 plt.title('Wykres funkcji f(x) = cos(x)/x^2')
