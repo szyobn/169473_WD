@@ -136,4 +136,28 @@ plt.axis('equal')  # Równy aspekt wykresu
 plt.show()
 
 zad 4 
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
+# Wczytanie pliku
+data = pd.read_csv('glass.data', header=None)
+
+# Nadanie kolumnom odpowiednich nazw
+data.columns = ['ID', 'RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe', 'Type']
+
+# Obliczenie ilości wystąpień każdego rodzaju szkła
+glass_counts = data['Type'].value_counts()
+
+# Tworzenie wykresu
+sns.set(style='whitegrid')  # Ustawienie stylu wykresu na podstawowy
+plt.figure(figsize=(10, 6))  # Rozmiar wykresu
+sns.barplot(x=glass_counts.index, y=glass_counts.values)  # Wykres słupkowy
+plt.xlabel('Rodzaj szkła')  # Etykieta osi x
+plt.ylabel('Ilość')  # Etykieta osi y
+plt.title('Ilość każdego rodzaju szkła')  # Tytuł wykresu
+plt.xticks(rotation=45)  # Obrót etykiet na osi x
+plt.legend(['Rodzaj szkła'])  # Legenda
+plt.show()
+
+POWODZENIA NIE WIEM CZYY COS POMOGLAM
