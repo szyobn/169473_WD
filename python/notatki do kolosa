@@ -122,4 +122,3 @@ grouped_data.plot(kind='pie', autopct='%.2f%%')
 # Wyświetlenie wykresu
 plt.show()
 
-# SZYMI ZOBACZ CZY TO DZIALA I ODPISZ TUTAJ
