@@ -53,7 +53,20 @@ plt.title('Procentowy udział klas')
 
 # Wyświetlenie wykresu
 plt.show()
-
+ luuuuuuuuuuuuuuuuuuuuuuuuuuubbbbbbbbb
+ # df = pd.read_csv('wine.data')
+#
+# print(df)
+#
+# randomowe = [np.random.randint(0, len(df)-1) for _ in range(100)]
+# df2 = df.iloc[randomowe]
+#
+# grupy = df2.groupby('Class').size()
+#
+# plt.pie(grupy, labels=grupy.index, autopct='%1.1f%%')
+# plt.legend()
+# plt.title("Udział klas")
+# plt.show()
 
 3.za pomocą biblioteki pandas wczytaj zawartość pliku "wine.data", 
 następnie na wykresie kolumnowym z biblioteki seaborn przedstaw średnie wartości alkoholu dla każdej  z klasy (kolumny alcohol i class).
