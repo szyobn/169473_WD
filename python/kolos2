@@ -1,1 +1,30 @@
+Grupa B
+zad1
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Utworzenie wektora x z wartościami z przedziału [-3, 5] z krokiem 0.3
+x = np.arange(-3, 5.3, 0.3)
+
+# Obliczenie wartości funkcji f(x)
+y = (x**2 + 3*x) / 5 + np.sin(x)
+
+# Utworzenie wykresu liniowego
+plt.plot(x, y, label='f(x)=(x^2+3x)/5 + sin(x)')
+
+# Dodanie etykiet do osi wykresu
+plt.xlabel('x')
+plt.ylabel('f(x)')
+
+# Ustawienie zakresu osi x na granice przedziału
+plt.xlim([-3, 5])
+
+# Dodanie tytułu linii
+plt.title('Wykres liniowy funkcji f(x)')
+
+# Dodanie legendy
+plt.legend()
+
+# Wyświetlenie wykresu
+plt.show()
 
