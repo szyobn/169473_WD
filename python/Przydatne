@@ -66,11 +66,10 @@ import matplotlib.pyplot as plt
 # Wczytanie pliku 'wine.data' do ramki danych
 df = pd.read_csv('wine.data', header=None)
 
-# Nadanie nazw kolumn
-df.columns = ['class', 'alcohol', 'malic_acid', 'ash', 'alcalinity', 'magnesium', 'total_phenols', 'flavanoids', 'nonflavanoid_phenols', 'proanthocyanins', 'color_intensity', 'hue', 'OD280_OD315', 'proline']
+
 
 # Stworzenie wykresu kolumnowego
-sns.barplot(data = df , x='class', y='alcohol',  errorbar=None , hue='Class' , palette = ['red','green','yellow'])
+#moze być coś inneego chyba(plt). plt = sns.barplot(data = df , x='Class', y='Alcohol',  errorbar=None , hue='Class' , palette = ['red','green','yellow'])
 
 # Dodanie etykiet osi i tytułu wykresu
 plt.xlabel('Class')
