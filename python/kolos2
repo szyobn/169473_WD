@@ -29,5 +29,24 @@ plt.legend()
 plt.show()
 
 zad 2 baw się dobrze XD
-zad 3 nie moge pliku podac chatowi bo za długi :), moge ci podesłać kod na podst. polecenia:
+zad 3 na podstawie polecenia jest to:
+import pandas as pd
+
+# Wczytanie pliku 'glass.data' do ramki danych
+df = pd.read_csv('glass.data', header=None)
+
+# Utworzenie nowej ramki danych, zawierającej tylko wiersze, w których typ szkła równa się 6 lub 7
+new_df = df[df[10].isin([6, 7])]
+
+# Grupowanie danych po kolumnie 'Type of glass'
+grouped = new_df.groupby(10)
+
+# Obliczanie procentowego udziału każdego typu szkła
+glass_counts = grouped.size()
+total_count = glass_counts.sum()
+glass_percentages = glass_counts / total_count * 100
+
+# Wyświetlanie wykresu kołowego
+glass_percentages.plot(kind='pie', autopct='%1.1f%%')
+
 
