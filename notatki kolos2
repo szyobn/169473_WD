@@ -131,9 +131,9 @@ plot.set(title='wykres slubkowy')
 
 plt.show()
 
+plt.yticks(range(-200,800,200))
 
-
-
+estimator=np.mean
 
 
 
