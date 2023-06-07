@@ -135,6 +135,8 @@ plt.yticks(range(-200,800,200))
 
 estimator=np.mean
 
+plt.bar(df["rok"],df["wsrt"])
+
 
 
 
