@@ -27,6 +27,7 @@ plt.title("x^2 + (sin(x^2)/x)")
 plt.xlim(-3, 5)
 plt.ylim(-1.5, 26)
 plt.legend(loc="upper left")
+plt.savefig(‘imię_nazwisko_nr_zadania.png')
 plt.show()
 zad3
 
