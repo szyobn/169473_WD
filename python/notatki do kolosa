@@ -152,3 +152,5 @@ plt.title('Number of Glass Types')
 plt.savefig('imię_nazwisko_nr_zadania.png', dpi=300)
 
 
+Pomoc od Maćka
+
