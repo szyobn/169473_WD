@@ -14,7 +14,20 @@ plt.legend()
 plt.xlim(2, 9)
 plt.show()
 zad2
+import numpy as np
+import matplotlib.pyplot as plt
 
+
+x = np.arange(-3,5.5,0.5)
+y = x**2 + (np.sin(x**2) / x)
+plt.plot(x, y, "r^", label="x^2 + (sin(x^2)/x)")
+plt.xlabel("x")
+plt.ylabel("wykres funkcji")
+plt.title("x^2 + (sin(x^2)/x)")
+plt.xlim(-3, 5)
+plt.ylim(-1.5, 26)
+plt.legend(loc="upper left")
+plt.show()
 zad3
 
 zad4
