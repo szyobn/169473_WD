@@ -30,5 +30,19 @@ plt.legend(loc="upper left")
 plt.savefig(‘imię_nazwisko_nr_zadania.png')
 plt.show()
 zad3
+import pandas as pd
+import matplotlib.pyplot as plt
 
+df = pd.read_csv('handel.csv')
+plt.figure(figsize=(10, 6))
+df_stacje_paliw = df[df['Wyszczegolnienie'] == 'stacje paliw']
+grouped = df_stacje_paliw.groupby('Wyszczegolnienie')['Wartosc'].sum()
+grouped.plot(kind='bar')
+plt.ylabel('Suma wartości')
+plt.xlabel('Stacja paliw')
+plt.xticks(fontsize=14, rotation='horizontal')
+plt.xticks([])  # Usunięcie etykiet słupków
+plt.title('Wartości dla stacji paliw na przestrzeni lat')
+plt.savefig('imie_nazwisko_nrzadania.png')
+plt.show()
 zad4
