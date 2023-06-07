@@ -137,7 +137,7 @@ estimator=np.mean
 
 plt.bar(df["rok"],df["wsrt"])
 sns.set()
-grupa = df.groupby("rok").agg({"wartosc":["mean"]})
+grupa = df.groupby("rok").agg({"wartosc":"mean"})
 plot= sns.barplot(data=grupa, x= rok, y= wartosc , hue= rok)
 
 
