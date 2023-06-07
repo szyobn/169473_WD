@@ -136,6 +136,9 @@ plt.yticks(range(-200,800,200))
 estimator=np.mean
 
 plt.bar(df["rok"],df["wsrt"])
+sns.set()
+grupa = df.groupby("rok").agg({"wartosc":["mean"]})
+plot= sns.barplot(data=grupa, x= rok, y= wartosc , hue= rok)
 
 
 
