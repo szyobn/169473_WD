@@ -27,7 +27,12 @@ public class Main {
          */
 
         //Zad3
+       /* Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj długość boku");
+       double liczba1 = scanner.nextDouble();
+        System.out.println("Wynik to: " +liczba1*liczba1);
 
+        */
         //Zad4
         /*Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj a: ");
@@ -81,8 +86,80 @@ public class Main {
                 System.out.println("Niepoprawny numer dnia tygodnia.");
 
         }
-
+        */
+        //Zad7
+      /*  Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj rok");
+        int rok = scanner.nextInt();
+        if( rok % 4 == 0 && rok % 100 == 0 || rok % 400 == 0)
+            System.out.println("Rok jest przestępny");
+        else
+            System.out.println("Rok nie jest przestępny");
 */
-    
+        //Zad8
+       /* Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj godzine: ");
+        int godz = scanner.nextInt();
+        System.out.println("Podaj minuta: ");
+        int min = scanner.nextInt();
+        System.out.println("Podaj sekunde: ");
+        int sek = scanner.nextInt();
+        if(godz>23 || godz<0 || min>59 || min<0 || sek>59 || sek<0)
+        {
+            System.out.println(("Godzina nie poprawna"));
+        }else{
+            System.out.println(("Godzina poprawna"));
+        }
+
+        */
+        //Zad9
+       /* Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbę:");
+           String liczba = scanner.nextLine();
+            int suma = 0;
+
+            for (char cyfra : liczba.toCharArray()) {
+                suma += Character.getNumericValue(cyfra);
+            }
+
+           System.out.println("Suma cyfr liczby to: " + suma);
+           */
+        //Zad10
+        /*Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbę całkowitą:");
+       String liczba = scanner.nextLine();
+
+        String odwrotna = new StringBuilder(liczba).reverse().toString();
+        System.out.println("Liczba w odwrotnej kolejności: " + odwrotna);
+
+         */
+        //Zad11
+       /* Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbę:");
+        String liczba = scanner.nextLine();
+        int suma = 0;
+        int n = liczba.length();
+
+        for (char cyfra : liczba.toCharArray()) {
+            suma += Math.pow(Character.getNumericValue(cyfra), n);
+        }
+
+        if (suma == Integer.parseInt(liczba)) {
+            System.out.println(liczba + " jest liczbą Armstronga.");
+        } else {
+            System.out.println(liczba + " nie jest liczbą Armstronga.");
+        }
+
+        */
+        //Zad12
+        /*int sum=0;
+        while(sum<101)
+        {
+            System.out.println("podaj liczbe:");
+            int liczba = scanner.nextInt();
+            sum = sum + liczba;
+        }
+        System.out.println("suma wieksza od 100");
+*/
     }
 }
