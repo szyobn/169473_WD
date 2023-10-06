@@ -1,0 +1,88 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        //Zad1
+       /* System.out.println("Hello world!");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj pierwszą: ");
+            double liczba1 = scanner.nextDouble();
+        System.out.println("Podaj pierwszą: ");
+        double liczba2 = scanner.nextDouble();
+        System.out.println("Dodawanie: "+ (liczba2 + liczba1));
+        System.out.println("Odejmowanie: "+ (liczba2 - liczba1));
+        System.out.println("Mnożenie: "+ (liczba2 * liczba1));
+        System.out.println("Dzielenie: "+ (liczba2 / liczba1));
+
+        */
+        //Zad2
+        /*Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj nazwe: ");
+        String liczba1 = scanner.nextLine();
+        System.out.println("Podaj nazwe: ");
+        String liczba2 = scanner.nextLine();
+        System.out.println(liczba1);
+        System.out.println(liczba2);
+         */
+
+        //Zad3
+
+        //Zad4
+        /*Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj a: ");
+        double a = scanner.nextDouble();
+        System.out.println(a*a);*/
+
+        //Zad5
+       /* Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj pierwsza: ");
+        int liczba1 = scanner.nextInt();
+        System.out.println("Podaj druga: ");
+        int liczba2 = scanner.nextInt();
+        System.out.println("Podaj trzcia: ");
+        int liczba3 = scanner.nextInt();
+        if (liczba1 > liczba2 && liczba1 > liczba3) {
+            System.out.println(liczba1);
+        } else if (liczba2 > liczba3) {
+            System.out.println(liczba2);
+        } else {
+            System.out.println(liczba3);
+        }
+        */
+       //Zad6
+        /* Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj numer dnia tyg: ");
+        int numer = scanner.nextInt();
+        switch (numer)
+        {
+            case 1:
+                System.out.println("Poniedziałek ");
+                break;
+            case 2:
+                System.out.println("Wtorek ");
+                break;
+            case 3:
+                System.out.println("Środa ");
+                break;
+            case 4:
+                System.out.println("Czwartek ");
+                break;
+            case 5:
+                System.out.println("Piątek ");
+                break;
+            case 6:
+                System.out.println("Sobota ");
+                break;
+            case 7:
+                System.out.println("Niedziela ");
+                break;
+            default:
+                System.out.println("Niepoprawny numer dnia tygodnia.");
+
+        }
+
+*/
+    
+    }
+}
