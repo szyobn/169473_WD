@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 
 namespace AiSD_IO_gr_3_1
 {
@@ -11,33 +12,59 @@ namespace AiSD_IO_gr_3_1
         private void btnstart_Click(object sender, EventArgs e)
         {
             int liczbaN = (int)nud_Liczba_N.Value;
-             int wynik = Fib(liczbaN);
-             MessageBox.Show(wynik.ToString());
+            int wynik = Fibb(liczbaN);
+            MessageBox.Show(wynik.ToString());
 
 
         }
 
-      
+        
+
 
 
         int Fib(int n)
         {
-            if(n == 0)
+            if (n == 0)
             {
                 return 0;
 
             }
 
-            if(n == 1)
+            if (n == 1)
             {
                 return 1;
             }
 
-            return Fib(n- 1)+ Fib(n-2);
+            return Fib(n - 1) + Fib(n - 2);
+
+        }
+
+        int Fibb(int n)
+        {
+            int[] wyraz = new int[n+2];
+           
+            wyraz[0] = 0;
+            wyraz[1] = 1;
             
+            for (int c =2; c<= n+1; c++)
+            {
+                
+
+                wyraz[c] = wyraz[c-1] + wyraz[c-2];
+                
+                
+            }
+            return wyraz[n];
+
+
         }
 
         private void nud_Liczba_N_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
