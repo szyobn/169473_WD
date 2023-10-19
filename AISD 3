@@ -1,0 +1,111 @@
+using System.Diagnostics.CodeAnalysis;
+
+namespace AiSD_IO_gr_3_1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnstart_Click(object sender, EventArgs e)
+        {
+            int liczbaN = (int)nud_Liczba_N.Value;
+            int wynik = Fibb(liczbaN);
+            MessageBox.Show(wynik.ToString());
+
+
+        }
+
+        
+
+
+
+        int Fib(int n)
+        {
+            if (n == 0)
+            {
+                return 0;
+
+            }
+
+            if (n == 1)
+            {
+                return 1;
+            }
+
+            return Fib(n - 1) + Fib(n - 2);
+
+        }
+
+        int Fibb(int n)
+        {
+            int[] wyraz = new int[n+2];
+           
+            wyraz[0] = 0;
+            wyraz[1] = 1;
+            
+            for (int c =2; c<= n+1; c++)
+            {
+                
+
+                wyraz[c] = wyraz[c-1] + wyraz[c-2];
+                
+                
+            }
+            return wyraz[n];
+
+
+        }
+
+
+
+
+        private void nud_Liczba_N_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_start_2_Click(object sender, EventArgs e)
+        {
+            int[] tab = { 4, 3, 7, 2, 5 };
+            int [] wynik1 = tabb(tab);
+            MessageBox.Show(wynik1.ToString());
+        }
+
+
+        int[] tabb(int[] tab1)
+        {
+            bool cbz = false;
+            do {
+                cbz = false;
+                for (int i = 0; i < tab1.Length - 1; i++)
+                {
+
+
+                    if (tab1[i] > tab1[i + 1])
+                    {
+                        int a = tab1[i];
+                        tab1[i] = tab1[i + 1];
+                        tab1[i + 1] = a;
+                        cbz = true;
+
+                    }
+
+
+                }
+
+                return tab1;
+
+                
+            }
+            while (cbz);
+        }
+    }
+}
